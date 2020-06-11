@@ -112,3 +112,11 @@ width: 25%;
     font-size: 50px !important;
 
 }
+.linha-lista{
+    display: flex;
+    justify-content: space-between;
+}
+.linha-lista i{
+    font-size: 30px ;
+    cursor: pointer;
+}
