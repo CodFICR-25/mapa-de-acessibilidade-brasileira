@@ -10,6 +10,7 @@
 </head>
 
 <body onload="carregaConfiguracoes()">
+    <!-- Aba principal -->
     <div class="tab">
         <button id="btnMapa" class="tablinks" onclick="openCity(event, 'Mapa')">
             <span class="material-icons">map</span>
@@ -25,12 +26,15 @@
             <i class="material-icons">settings</i>Configurações
         </button>
     </div>
-
+    <!-- Fim da aba principal -->
+    
+    <!-- Exibicao do mapa -->
     <div id="Mapa" class="tabcontent">
-
         Insira aqui o conteudo do mapa
     </div>
-
+    <!-- fim da exibicao do mapa -->
+    
+    <!-- conteudo da aba locais -->
     <div id="Locais" class="subtab">
         <button id="btnHoteis" class="tablinks" onclick="openCity(event, 'Hoteis')">
             <i class="material-icons">hotel</i>Hotéis
@@ -45,7 +49,9 @@
             <i class="material-icons">camera_alt</i>Pontos Turísticos
         </button>
     </div>
-
+    <!-- fim conteudo da aba locais -->
+    
+    <!-- conteudo da aba hoteis -->
     <div id="Hoteis" class="subtabhoteis">
         <p>3 hotéis cadastrados</p>
         <ul>
@@ -63,7 +69,9 @@
             </li>
         </ul>
     </div>
+    <!-- fim do conteudo da aba hoteis -->
 
+    <!-- conteudo da aba restaurantes -->
     <div id="Restaurante" class="subtabrest">
         <p>2 restaurantes cadastrados</p>
         <ul>
@@ -78,7 +86,9 @@
             </li>
         </ul>
      </div>
-
+     <!-- fim do conteudo da aba restaurantes -->
+    
+     <!-- conteudo da aba shopping -->
     <div id="Shopping" class="subtabshop">
         <p>3 shopping cadastrados</p>
         <ul>
@@ -99,11 +109,14 @@
         </ul>
 
     </div>
+     <!-- fim do conteudo da aba shopping -->
+
+     <!-- conteudo da aba ponto turistico -->
     <div id="Pontos-Turisticos" class="subtabpontos">
         <p>4 ponto turístico cadastrados</p>
         <ul>
             <li class="linha-lista">
-                <div><b>Praça do Marco Zero</b><br/><i>Av. Alfredo Lisboa, S/N</div>
+                <div><b>Praça do Marco Zero</b><br/>Av. Alfredo Lisboa, S/N</div>
                 <div><i class="material-icons">near_me</i></div>
             </li>
 
@@ -124,20 +137,25 @@
 
         </ul>
     </div>
+    <!-- fim do conteudo da aba ponto turistico -->
 
+    <!-- exibicao do profile -->
     <div id="Profile" class="tabcontent">
         Insira aqui o conteudo do profile
     </div>
+    <!-- fim da exibicao do profile -->
 
-
+    <!-- exibicao de configuracoes -->
     <div id="Configuracoes" class="tabcontent">
         Insira aqui o conteudo do configurações
     </div>
+    <!-- fim exibicao de configuracoes -->
 
+    <!-- botao flutuante do lado esquerdo -->
     <div class="float-icon">
         <i class="material-icons question_answer">question_answer</i>
-
     </div>
+    <!-- botao flutuante do lado esquerdo -->
 
 </body>
 

@@ -33,7 +33,7 @@ function openCity(evt, cityName) {
         document.getElementsByClassName("subtabshop")[0].style.display = "none";
         document.getElementsByClassName("subtabpontos")[0].style.display = "none";
     }
-  
+    /*SubAbaLocais*/  
     if(evt.currentTarget.id == 'btnHoteis'){
         document.getElementsByClassName("subtabhoteis")[0].style.display = "block";
         document.getElementsByClassName("subtabrest")[0].style.display = "none";
@@ -60,5 +60,3 @@ function openCity(evt, cityName) {
     
 }
 
-// Get the element with id="defaultOpen" and click on it
-// document.getElementById("defaultOpen").click();
