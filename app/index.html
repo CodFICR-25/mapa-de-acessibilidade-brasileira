@@ -12,7 +12,8 @@
 <body onload="carregaConfiguracoes()">
     <div class="tab">
         <button id="btnMapa" class="tablinks" onclick="openCity(event, 'Mapa')">
-            <i class="material-icons">map</i> Mapa
+            <span class="material-icons">map</span> 
+            <span>Mapa</span>
         </button>
         <button id="btnLocais" class="tablinks" onclick="openCity(event, 'Locais')">
             <i class="material-icons">location_on</i>Locais
@@ -45,28 +46,39 @@
     </div>
 
     <div id="Hoteis" class="subtabhoteis">
-        <p>3 lugares cadastrados Hoteis</p>
-        <div style="border: 1px solid black">Hotel Ibis</div>
-        <div style="border: 1px solid black">Pousada dos Anjos</div>
-        <div style="border: 1px solid black">Mar Hotel</div>
-    </div>
+        <p>3 hotéis cadastrados</p>
+        <ul>
+            <li>Hotel Ibis<br/>Av. Eng. Domingos Ferreira, 683</li>
+            <li>Pousada Praia Boa Viagem<br/>R. Petrolina, 81</li>
+            <li>Mar Hotel Conventions<br/>R. Barão de Souza Leão, 451</li>
+          </ul>
+     </div>
+
     <div id="Restaurante" class="subtabrest">
-        <p>3 lugares cadastrados Restaurante</p>
-        <div style="border: 1px solid black">Hotel Ibis</div>
-        <div style="border: 1px solid black">Pousada dos Anjos</div>
-        <div style="border: 1px solid black">Mar Hotel</div>
+        <p>2 restaurantes cadastrados</p>
+        <ul>
+             <li>China in Box<br/>Av. Caxangá, 2000</li>
+             <li>Churrascaria Bode do Primo<br/>R. Cap. Aurélio de Araújo, 63</li>
+        </ul>
+
     </div>
     <div id="Shopping" class="subtabshop">
-        <p>3 lugares cadastrados Shopping</p>
-        <div style="border: 1px solid black">Hotel Ibis</div>
-        <div style="border: 1px solid black">Pousada dos Anjos</div>
-        <div style="border: 1px solid black">Mar Hotel</div>
+        <p>3 shopping cadastrados</p>
+        <ul>
+            <li>Shopping Boa Vista<br/>R. do Giriquiti, 48</li>
+            <li>Shopping Recife<br/>R. Padre Carapuceiro, 777</li>
+            <li>RioMar Recife<br/>Av. República do Líbano</li>
+         </ul>
+
     </div>
     <div id="Pontos-Turisticos" class="subtabpontos">
-        <p>3 lugares cadastrados Pontos-Turisticos</p>
-        <div style="border: 1px solid black">Hotel Ibis</div>
-        <div style="border: 1px solid black">Pousada dos Anjos</div>
-        <div style="border: 1px solid black">Mar Hotel</div>
+        <p>4 ponto turístico cadastrados</p>
+        <ul>
+            <li>Praça do Marco Zero<br/>Av. Alfredo Lisboa, S/N</li>
+            <li>Instituto Ricardo Brennand<br/>R. Mário Campelo, 700</li>
+            <li>Jardin Botânico do Recife<br/>Rodovia BR 232, s/n</li>
+            <li>Centro Cultural Cais do Sertão<br/>Armazen 10, Av. Alfredo Lisboa, s/n</li>
+         </ul>
     </div>
 
     <div id="Profile" class="tabcontent">
