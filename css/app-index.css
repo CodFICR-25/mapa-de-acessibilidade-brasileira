@@ -28,7 +28,7 @@ body {
     
     ul li {
       border: 1px solid #000;
-      margin-top: -1px; /* Prevent double borders */
+      margin-top: -1px;
       background-color: #fff;
       padding: 12px;
     }
@@ -101,4 +101,14 @@ width: 25%;
 
 .topright:hover {
     color: red;
+}
+.float-icon {
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    cursor: pointer;
+}
+.question_answer {
+    font-size: 50px !important;
+
 }
