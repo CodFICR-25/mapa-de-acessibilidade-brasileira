@@ -4,80 +4,69 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/reset.css">
-    <style>
-        body {
-            font-family: Arial;
-        }
-
-        /* Style the tab */
-        .tab {
-            overflow: hidden;
-            border: 1px solid #8DD7CF;
-            background-color: #8DD7CF;
-        }
-
-        /*estilo dos locais*/
-        .tabcontent {
-            overflow: hidden;
-            border: 1px solid #8DD7CF;
-            background-color: rgb(255, 255, 255);
-        }
-
-        /* Style the buttons inside the tab */
-        .tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 133px;
-            transition: 0.3s;
-            font-size: 17px;
-        }
-
-        /* Change background color of buttons on hover */
-        .tab button:hover {
-            background-color: rgb(255, 255, 255);
-        }
-
-        /* Create an active/current tablink class */
-        .tab button.active {
-            background-color: rgb(255, 255, 255);
-        }
-
-        /* Style the tab content */
-        .tabcontent {
-            display: none;
-            padding: 6px 12px;
-            border: 1px solid #ccc;
-            border-top: none;
-        }
-
-
-        .topright:hover {
-            color: red;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/app-index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="../js/app-index.js"></script>
 </head>
 
-<body>
-
+<body onload="carregaConfiguracoes()">
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'Mapa')" id="defaultOpen">Mapa</button>
-        <button class="tablinks" onclick="openCity(event, 'Locais')">Locais</button>
-        <button class="tablinks" onclick="openCity(event, 'Profile')">Profile</button>
-        <button class="tablinks" onclick="openCity(event, 'Configuracoes')">Configurações</button>
+        <button id="btnMapa" class="tablinks" onclick="openCity(event, 'Mapa')">
+            <i class="material-icons">map</i> Mapa
+        </button>
+        <button id="btnLocais" class="tablinks" onclick="openCity(event, 'Locais')">
+            <i class="material-icons">location_on</i>Locais
+        </button>
+        <button id="btnProfile" class="tablinks" onclick="openCity(event, 'Profile')">
+            <i class="material-icons">person</i>Profile
+        </button>
+        <button id="btnConfiguracoes" class="tablinks" onclick="openCity(event, 'Configuracoes')">
+            <i class="material-icons">settings</i>Configurações
+        </button>
     </div>
 
     <div id="Mapa" class="tabcontent">
         Insira aqui o conteudo do mapa
     </div>
 
-    <div id="Locais" class="tabcontent">
-        <button class="tablinks" onclick="openCity(event, 'Hoteis')">Hotéis</button>
-        <button class="tablinks" onclick="openCity(event, 'Restaurante')">Restaurante</button>
-        <button class="tablinks" onclick="openCity(event, 'Shopping')">Shopping</button>
-        <button class="tablinks" onclick="openCity(event, 'Pontos-Turisticos')">Pontos Turísticos</button>
+    <div id="Locais" class="subtab">
+        <button id="btnHoteis" class="tablinks" onclick="openCity(event, 'Hoteis')">
+            <i class="material-icons">hotel</i>Hotéis
+        </button>
+        <button id="btnRestaurante" class="tablinks" onclick="openCity(event, 'Restaurante')">
+            <i class="material-icons">restaurant</i>Restaurante
+        </button>
+        <button id="btnShopping" class="tablinks" onclick="openCity(event, 'Shopping')">
+            <i class="material-icons">local_mall</i>Shopping
+        </button>
+        <button id="btnPontos-Turisticos" class="tablinks" onclick="openCity(event, 'Pontos-Turisticos')">
+            <i class="material-icons">camera_alt</i>Pontos Turísticos
+        </button>
+    </div>
+
+    <div id="Hoteis" class="subtabhoteis">
+        <p>3 lugares cadastrados Hoteis</p>
+        <div style="border: 1px solid black">Hotel Ibis</div>
+        <div style="border: 1px solid black">Pousada dos Anjos</div>
+        <div style="border: 1px solid black">Mar Hotel</div>
+    </div>
+    <div id="Restaurante" class="subtabrest">
+        <p>3 lugares cadastrados Restaurante</p>
+        <div style="border: 1px solid black">Hotel Ibis</div>
+        <div style="border: 1px solid black">Pousada dos Anjos</div>
+        <div style="border: 1px solid black">Mar Hotel</div>
+    </div>
+    <div id="Shopping" class="subtabshop">
+        <p>3 lugares cadastrados Shopping</p>
+        <div style="border: 1px solid black">Hotel Ibis</div>
+        <div style="border: 1px solid black">Pousada dos Anjos</div>
+        <div style="border: 1px solid black">Mar Hotel</div>
+    </div>
+    <div id="Pontos-Turisticos" class="subtabpontos">
+        <p>3 lugares cadastrados Pontos-Turisticos</p>
+        <div style="border: 1px solid black">Hotel Ibis</div>
+        <div style="border: 1px solid black">Pousada dos Anjos</div>
+        <div style="border: 1px solid black">Mar Hotel</div>
     </div>
 
     <div id="Profile" class="tabcontent">
@@ -88,29 +77,6 @@
     <div id="Configuracoes" class="tabcontent">
         Insira aqui o conteudo do configurações
     </div>
-
-
-
-
-    <script>
-        function openCity(evt, cityName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-
-        // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
-    </script>
-
 </body>
 
 </html>
