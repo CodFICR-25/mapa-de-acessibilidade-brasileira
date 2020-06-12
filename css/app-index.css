@@ -2,7 +2,9 @@ body {
     font-family: Arial;
 }
 
+
 /* Style the tab */
+
 .tab {
     overflow: hidden;
     border: 1px solid #8DD7CF;
@@ -16,32 +18,37 @@ body {
     background-color: rgb(255, 255, 255);
     width: 100%;
 }
- p{
+
+p {
     margin: 40px 0 10px 10px;
-    
 }
-     ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    ul li {
-      border: 1px solid #000;
-      margin-top: -1px;
-      background-color: #fff;
-      padding: 12px;
-    }
-    
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    border: 1px solid #000;
+    margin-top: -1px;
+    background-color: #fff;
+    padding: 12px;
+}
+
 .tablinks {
-width: 25%;
+    width: 25%;
 }
+
+
 /*estilo dos locais*/
+
 .tabcontent {
     overflow: hidden;
     border: 1px solid #8DD7CF;
     background-color: rgb(255, 255, 255);
 }
+
 
 /* Style the buttons inside the tab */
 
@@ -58,6 +65,7 @@ width: 25%;
     height: 50px;
     justify-content: center;
 }
+
 .subtab button {
     display: flex;
     align-items: center;
@@ -72,7 +80,9 @@ width: 25%;
     height: 50px;
 }
 
+
 /* Change background color of buttons on hover */
+
 .tab button:hover {
     background-color: rgb(255, 255, 255);
 }
@@ -81,7 +91,9 @@ width: 25%;
     background-color: #8DD7CF;
 }
 
+
 /* Create an active/current tablink class */
+
 .tab button.active {
     background-color: rgb(255, 255, 255);
 }
@@ -90,7 +102,9 @@ width: 25%;
     background-color: #8DD7CF;
 }
 
+
 /* Style the tab content */
+
 .tabcontent {
     display: none;
     padding: 6px 12px;
@@ -98,25 +112,27 @@ width: 25%;
     border-top: none;
 }
 
-
 .topright:hover {
     color: red;
 }
+
 .float-icon {
     position: fixed;
     bottom: 0;
     left: 10px;
     cursor: pointer;
 }
+
 .question_answer {
     font-size: 50px !important;
-
 }
-.linha-lista{
+
+.linha-lista {
     display: flex;
     justify-content: space-between;
 }
-.linha-lista i{
-    font-size: 30px ;
+
+.linha-lista i {
+    font-size: 30px;
     cursor: pointer;
 }

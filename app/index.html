@@ -27,13 +27,13 @@
         </button>
     </div>
     <!-- Fim da aba principal -->
-    
+
     <!-- Exibicao do mapa -->
     <div id="Mapa" class="tabcontent">
         Insira aqui o conteudo do mapa
     </div>
     <!-- fim da exibicao do mapa -->
-    
+
     <!-- conteudo da aba locais -->
     <div id="Locais" class="subtab">
         <button id="btnHoteis" class="tablinks" onclick="openCity(event, 'Hoteis')">
@@ -50,14 +50,14 @@
         </button>
     </div>
     <!-- fim conteudo da aba locais -->
-    
+
     <!-- conteudo da aba hoteis -->
     <div id="Hoteis" class="subtabhoteis">
         <p>3 hotéis cadastrados</p>
         <ul>
             <li class="linha-lista">
-               <div><b>Hotel Ibis</b><br/>Av. Eng. Domingos Ferreira, 683</div>
-               <div><i class="material-icons">near_me</i></div>
+                <div><b>Hotel Ibis</b><br />Av. Eng. Domingos Ferreira, 683</div>
+                <div><i class="material-icons">near_me</i></div>
             </li>
             <li class="linha-lista">
                 <div><b>Pousada Praia Boa Viagem</b><br />R. Petrolina, 81</div>
@@ -76,7 +76,7 @@
         <p>2 restaurantes cadastrados</p>
         <ul>
             <li class="linha-lista">
-                <div><b>China in Box</b><br/>Av. Caxangá, 2000</div>
+                <div><b>China in Box</b><br />Av. Caxangá, 2000</div>
                 <div><i class="material-icons">near_me</i></div>
             </li>
 
@@ -85,38 +85,38 @@
                 <div><i class="material-icons">near_me</i></div>
             </li>
         </ul>
-     </div>
-     <!-- fim do conteudo da aba restaurantes -->
-    
-     <!-- conteudo da aba shopping -->
+    </div>
+    <!-- fim do conteudo da aba restaurantes -->
+
+    <!-- conteudo da aba shopping -->
     <div id="Shopping" class="subtabshop">
         <p>3 shoppings cadastrados</p>
         <ul>
             <li class="linha-lista">
-               <div><b>Shopping Boa Vista</b><br/>R. do Giriquiti, 48</div>
-               <div><i class="material-icons">near_me</i></div>
+                <div><b>Shopping Boa Vista</b><br />R. do Giriquiti, 48</div>
+                <div><i class="material-icons">near_me</i></div>
             </li>
 
             <li class="linha-lista">
-               <div><b>Shopping Recife</b><br/>R. Padre Carapuceiro, 777</div>
-               <div><i class="material-icons">near_me</i></div>
+                <div><b>Shopping Recife</b><br />R. Padre Carapuceiro, 777</div>
+                <div><i class="material-icons">near_me</i></div>
             </li>
 
             <li class="linha-lista">
-               <div><b>RioMar Recife</b><br/>Av. República do Líbano</div>
-               <div><i class="material-icons">near_me</i></div>
+                <div><b>RioMar Recife</b><br />Av. República do Líbano</div>
+                <div><i class="material-icons">near_me</i></div>
             </li>
         </ul>
 
     </div>
-     <!-- fim do conteudo da aba shopping -->
+    <!-- fim do conteudo da aba shopping -->
 
-     <!-- conteudo da aba ponto turistico -->
+    <!-- conteudo da aba ponto turistico -->
     <div id="Pontos-Turisticos" class="subtabpontos">
         <p>4 pontos turísticos cadastrados</p>
         <ul>
             <li class="linha-lista">
-                <div><b>Praça do Marco Zero</b><br/>Av. Alfredo Lisboa, S/N</div>
+                <div><b>Praça do Marco Zero</b><br />Av. Alfredo Lisboa, S/N</div>
                 <div><i class="material-icons">near_me</i></div>
             </li>
 
@@ -126,7 +126,7 @@
             </li>
 
             <li class="linha-lista">
-                <div><b>Jardin Botânico do Recife</b><br/>Rodovia BR 232, s/n</div>
+                <div><b>Jardin Botânico do Recife</b><br />Rodovia BR 232, s/n</div>
                 <div><i class="material-icons">near_me</i></div>
             </li>
 
@@ -146,8 +146,34 @@
     <!-- fim da exibicao do profile -->
 
     <!-- exibicao de configuracoes -->
-    <div id="Configuracoes" class="tabcontent">
-        Insira aqui o conteudo do configurações
+    <div id="Configuracoes" class="subtab">
+        <button id="btnFavoritos" class="tablinks" onclick="openCity(event, 'Favoritos')">
+            <i class="material-icons">grade</i>Favoritos
+        </button>
+        <button id="btnReviews" class="tablinks" onclick="openCity(event, 'Reviews')">
+            <i class="material-icons">rate_review</i>Reviews
+        </button>
+        <button id="btnAvaliacoes" class="tablinks" onclick="openCity(event, 'Avaliacoes')">
+            <i class="material-icons">show_chart</i>Avaliações
+        </button>
+        <button id="btnPontos-Cadastrados" class="tablinks" onclick="openCity(event, 'Pontos-Cadastrados')">
+            <i class="material-icons">add_location_alt</i>Pontos Cadastrados
+        </button>
+    </div>
+    <div id="Favoritos" class="subtabfav">
+        Você não tem nenhum lugar favorito!
+    </div>
+
+    <div id="Reviews" class="subtabrev">
+        Você ainda não fez nenhuma review!
+    </div>
+
+    <div id="Avaliacoes" class="subtabava">
+        Você ainda não fez nenhuma avaliação!
+    </div>
+
+    <div id="Pontos-Cadastrados" class="subtabseuspontos">
+        Você ainda não cadastrou nenhum ponto!
     </div>
     <!-- fim exibicao de configuracoes -->
 
@@ -156,7 +182,7 @@
         <i class="material-icons question_answer">question_answer</i>
     </div>
     <!-- botao flutuante do lado esquerdo -->
-    
+
 </body>
 
 </html>
