@@ -1,4 +1,3 @@
-
 function carregaConfiguracoes() {
     /*escondendo sub aba dos locais*/
     document.getElementsByClassName("subtab")[0].style.display = "none";
@@ -14,7 +13,11 @@ function carregaConfiguracoes() {
     document.getElementsByClassName("subtabrev")[0].style.display = "none";
     document.getElementsByClassName("subtabava")[0].style.display = "none";
     document.getElementsByClassName("subtabseuspontos")[0].style.display = "none";
+
+    // escondendo botao flutuante por causa do mapa
+    document.getElementsByClassName("float-icon")[0].style.display = "none";
 }
+
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -35,6 +38,7 @@ function openCity(evt, cityName) {
         document.getElementsByClassName("subtabrest")[0].style.display = "none";
         document.getElementsByClassName("subtabshop")[0].style.display = "none";
         document.getElementsByClassName("subtabpontos")[0].style.display = "none";
+        document.getElementsByClassName("subtabmap")[0].style.display = "none";
         document.getElementById("Configuracoes").style.display = "none";
     } else if (evt.currentTarget.id == 'btnMapa' || evt.currentTarget.id == 'btnProfile' || evt.currentTarget.id == 'btnConfiguracoes') {
         document.getElementById("Configuracoes").style.display = "none";
@@ -43,12 +47,17 @@ function openCity(evt, cityName) {
         document.getElementsByClassName("subtabrest")[0].style.display = "none";
         document.getElementsByClassName("subtabshop")[0].style.display = "none";
         document.getElementsByClassName("subtabpontos")[0].style.display = "none";
+        document.getElementsByClassName("subtabmap")[0].style.display = "none";
     }
 
     if (evt.currentTarget.id == 'btnConfiguracoes') {
         document.getElementById("Configuracoes").style.display = "block";
     }
-
+    document.getElementsByClassName("float-icon")[0].style.display = "block";
+    if (evt.currentTarget.id == 'btnMapa') {
+        document.getElementsByClassName("subtabmap")[0].style.display = "block";
+        document.getElementsByClassName("float-icon")[0].style.display = "none";
+    }
     /*SubAbaLocais*/
     if (evt.currentTarget.id == 'btnHoteis') {
         document.getElementsByClassName("subtabhoteis")[0].style.display = "block";
@@ -99,4 +108,3 @@ function openCity(evt, cityName) {
         document.getElementsByClassName("subtabseuspontos")[0].style.display = "none";
     }
 }
-

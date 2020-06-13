@@ -43,10 +43,11 @@ ul li {
 
 /*estilo dos locais*/
 
-.tabcontent {
+.subtabmap {
     overflow: hidden;
     border: 1px solid #8DD7CF;
     background-color: rgb(255, 255, 255);
+    height: 90vh;
 }
 
 
