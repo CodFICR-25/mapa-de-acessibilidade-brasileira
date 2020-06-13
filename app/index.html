@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/app-index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="../js/app-index.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/app-index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body onload="carregaConfiguracoes()">
+    <!-- Aba principal -->
+    <div class="tab">
+        <button id="btnMapa" class="tablinks" onclick="openCity(event, 'Mapa')">
+            <span class="material-icons">map</span>
+            <span>Mapa</span>
+        </button>
+        <button id="btnLocais" class="tablinks" onclick="openCity(event, 'Locais')">
+            <i class="material-icons">location_on</i>Locais
+        </button>
+        <button id="btnProfile" class="tablinks" onclick="openCity(event, 'Profile')">
+           <i class="material-icons">person</i>Profile
+        </button>
+        <button id="btnConfiguracoes" class="tablinks" onclick="openCity(event, 'Configuracoes')">
+            <i class="material-icons">settings</i>Configurações
+        </button>
+    </div>
+    <!-- Fim da aba principal -->
+
+    <!-- Exibicao do mapa -->
+    <div id="Mapa" class="subtabmap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63209.06866479981!2d-34.95580371360643!3d-8.043518197598958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab196f88c446e5%3A0x3c9ef52922447fd4!2sRecife%20-%20PE!5e0!3m2!1spt-BR!2sbr!4v1591735353867!5m2!1spt-BR!2sbr"
+            width="100%" height="100%" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <!-- fim da exibicao do mapa -->
+
+    <!-- conteudo da aba locais -->
+    <div id="Locais" class="subtab">
+        <button id="btnHoteis" class="tablinks" onclick="openCity(event, 'Hoteis')">
+            <i class="material-icons">hotel</i>Hotéis
+        </button>
+        <button id="btnRestaurante" class="tablinks" onclick="openCity(event, 'Restaurante')">
+            <i class="material-icons">restaurant</i>Restaurantes
+        </button>
+        <button id="btnShopping" class="tablinks" onclick="openCity(event, 'Shopping')">
+            <i class="material-icons">local_mall</i>Shopping
+        </button>
+        <button id="btnPontos-Turisticos" class="tablinks" onclick="openCity(event, 'Pontos-Turisticos')">
+            <i class="material-icons">camera_alt</i>Pontos Turísticos
+        </button>
+    </div>
+    <!-- fim conteudo da aba locais -->
+
+    <!-- conteudo da aba hoteis -->
+    <div id="Hoteis" class="subtabhoteis">
+        <p>3 hotéis cadastrados</p>
+        <ul>
+            <li class="linha-lista">
+                <div><b>Hotel Ibis</b><br />Av. Eng. Domingos Ferreira, 683</div>
+                <div><i class="material-icons">near_me</i></div>
+            </li>
+            <li class="linha-lista">
+                <div><b>Pousada Praia Boa Viagem</b><br />R. Petrolina, 81</div>
+                <div><i class="material-icons">near_me</i></div>
+            </li>
+            <li class="linha-lista">
+                <div><b>Mar Hotel Conventions</b><br />R. Barão de Souza Leão, 451</div>
+                <div><i class="material-icons">near_me</i></div>
+            </li>
+        </ul>
+    </div>
+    <!-- fim do conteudo da aba hoteis -->
+
+    <!-- conteudo da aba restaurantes -->
+    <div id="Restaurante" class="subtabrest">
+        <p>2 restaurantes cadastrados</p>
+        <ul>
+            <li class="linha-lista">
+                <div><b>China in Box</b><br />Av. Caxangá, 2000</div>
+                <div><i class="material-icons">near_me</i></div>
+            </li>
+
+            <li class="linha-lista">
+                <div><b>Churrascaria Bode do Primo</b><br />R. Cap. Aurélio de Araújo, 63</div>
+                <div><i class="material-icons">near_me</i></div>
+            </li>
+        </ul>
+    </div>
+    <!-- fim do conteudo da aba restaurantes -->
+
+    <!-- conteudo da aba shopping -->
+    <div id="Shopping" class="subtabshop">
+        <p>3 shoppings cadastrados</p>
+        <ul>
+            <li class="linha-lista">
+                <div><b>Shopping Boa Vista</b><br />R. do Giriquiti, 48</div>
+                <div><i class="material-icons">near_me</i></div>
+            </li>
+
+            <li class="linha-lista">
+                <div><b>Shopping Recife</b><br />R. Padre Carapuceiro, 777</div>
+                <div><i class="material-icons">near_me</i></div>
+            </li>
+
+            <li class="linha-lista">
+                <div><b>RioMar Recife</b><br />Av. República do Líbano</div>
+                <div><i class="material-icons">near_me</i></div>
+            </li>
+        </ul>
+
+    </div>
+    <!-- fim do conteudo da aba shopping -->
+
+    <!-- conteudo da aba ponto turistico -->
+    <div id="Pontos-Turisticos" class="subtabpontos">
+        <p>4 pontos turísticos cadastrados</p>
+        <ul>
+            <li class="linha-lista">
+                <div><b>Praça do Marco Zero</b><br />Av. Alfredo Lisboa, S/N</div>
+                <div><i class="material-icons">near_me</i></div>
+            </li>
+
+            <li class="linha-lista">
+                <div><b>Instituto Ricardo Brennand</b><br />R. Mário Campelo, 700</div>
+                <div><i class="material-icons">near_me</i></div>
+            </li>
+
+            <li class="linha-lista">
+                <div><b>Jardin Botânico do Recife</b><br />Rodovia BR 232, s/n</div>
+                <div><i class="material-icons">near_me</i></div>
+            </li>
+
+            <li class="linha-lista">
+                <div><b>Centro Cultural Cais do Sertão</b><br />Armazen 10, Av. Alfredo Lisboa, s/n</div>
+                <div><i class="material-icons">near_me</i></div>
+            </li>
+
+        </ul>
+    </div>
+    <!-- fim do conteudo da aba ponto turistico -->
+
+    <!-- exibicao do profile -->
+    <div id="Profile" class="tabcontent">
+        <div class="container">
+            <div class="content first-content">
+                <div class="first-column">
+                    <h2 class="title title-primary">Bem vindo!</h2>
+                    <p class="description description-primary">Se você já é cadastrado no nosso site</p>
+                    <p class="description description-primary">Faça login com suas informações pessoais</p>
+                    <button id="signin" class="btn btn-primary">Entrar</button>
+                </div>    
+                <div class="second-column">
+                    <h2 class="title title-second">Crie uma conta</h2>
+                    <div class="social-media">
+                        <ul class="list-social-media">
+                            <a class="link-social-media" href="#">
+                                <li class="item-social-media">
+                                    <i class="fab fa-facebook-f"></i>        
+                                </li>
+                            </a>
+                            <a class="link-social-media" href="#">
+                                <li class="item-social-media">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </li>
+                            </a>
+                            <a class="link-social-media" href="#">
+                                <li class="item-social-media">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </li>
+                            </a>
+                        </ul>
+                    </div><!-- social media -->
+                    <p class="description description-second">ou use seu email para se registar:</p>
+                    <form class="form">
+                        <label class="label-input" for="">
+                            <i class="far fa-user icon-modify"></i>
+                            <input type="text" placeholder="Name">
+                        </label>
+                        
+                        <label class="label-input" for="">
+                            <i class="far fa-envelope icon-modify"></i>
+                            <input type="email" placeholder="Email">
+                        </label>
+                        
+                        <label class="label-input" for="">
+                            <i class="fas fa-lock icon-modify"></i>
+                            <input type="password" placeholder="Password">
+                        </label>
+                        
+                        
+                        <button class="btn btn-second">Entre</button>        
+                    </form>
+                </div><!-- second column -->
+            </div><!-- first content -->
+            <div class="content second-content">
+                <div class="first-column">
+                    <h2 class="title title-primary">Olá, usuário MAB!</h2>
+                    <p class="description description-primary">Insira seus dados pessoais</p>
+                    <p class="description description-primary">E comece a mapear seus pontos acessíveis</p>
+                    <button id="signup" class="btn btn-primary">Entre</button>
+                </div>
+                <div class="second-column">
+                    <h2 class="title title-second">Faça seu login</h2>
+                    <div class="social-media">
+                        <ul class="list-social-media">
+                            <a class="link-social-media" href="#">
+                                <li class="item-social-media">
+                                    <i class="fab fa-facebook-f"></i>
+                                </li>
+                            </a>
+                            <a class="link-social-media" href="#">
+                                <li class="item-social-media">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </li>
+                            </a>
+                            <a class="link-social-media" href="#">
+                                <li class="item-social-media">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </li>
+                            </a>
+                        </ul>
+                    </div><!-- social media -->
+                    <p class="description description-second">ou use seu email para fazer login:</p>
+                    <form class="form">
+                    
+                        <label class="label-input" for="">
+                            <i class="far fa-envelope icon-modify"></i>
+                            <input type="email" placeholder="Email">
+                        </label>
+                    
+                        <label class="label-input" for="">
+                            <i class="fas fa-lock icon-modify"></i>
+                            <input type="password" placeholder="Password">
+                        </label>
+                    
+                        <a class="password" href="#">Esqueceu sua senha?</a>
+                        <button class="btn btn-second">Entre</button>
+                    </form>
+                </div><!-- second column -->
+            </div><!-- second-content -->
+        </div>
+        <script src="../js/app.js"></script>
+    </div>
+    <!-- fim da exibicao do profile -->
+
+    <!-- exibicao de configuracoes -->
+    <div id="Configuracoes" class="subtab">
+        <button id="btnFavoritos" class="tablinks" onclick="openCity(event, 'Favoritos')">
+            <i class="material-icons">grade</i>Favoritos
+        </button>
+        <button id="btnReviews" class="tablinks" onclick="openCity(event, 'Reviews')">
+            <i class="material-icons">rate_review</i>Reviews
+        </button>
+        <button id="btnAvaliacoes" class="tablinks" onclick="openCity(event, 'Avaliacoes')">
+            <i class="material-icons">show_chart</i>Avaliações
+        </button>
+        <button id="btnPontos-Cadastrados" class="tablinks" onclick="openCity(event, 'Pontos-Cadastrados')">
+            <i class="material-icons">add_location_alt</i>Pontos Cadastrados
+        </button>
+    </div>
+    <div id="Favoritos" class="subtabfav">
+        Você não tem nenhum lugar favorito!
+    </div>
+
+    <div id="Reviews" class="subtabrev">
+        Você ainda não fez nenhuma review!
+    </div>
+
+    <div id="Avaliacoes" class="subtabava">
+        Você ainda não fez nenhuma avaliação!
+    </div>
+
+    <div id="Pontos-Cadastrados" class="subtabseuspontos">
+        Você ainda não cadastrou nenhum ponto!
+    </div>
+    <!-- fim exibicao de configuracoes -->
+
+    <!-- botao flutuante do lado esquerdo -->
+    <div class="float-icon">
+        <i class="material-icons question_answer">question_answer</i>
+    </div>
+    <!-- botao flutuante do lado esquerdo -->
+
+</body>
+
+</html>
